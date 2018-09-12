@@ -29,7 +29,7 @@ public class MainViewModel extends BaseViewModel<MainView> {
                         userData.setValue(userList);
                     }
                 }, throwable -> {
-
+                    System.out.println();
                 }));
     }
 

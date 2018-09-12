@@ -5,9 +5,14 @@ import android.os.Bundle;
 import com.livedatamvvmretrofit.BR;
 import com.livedatamvvmretrofit.R;
 import com.livedatamvvmretrofit.base.BaseActivity;
+import com.livedatamvvmretrofit.data.User;
 import com.livedatamvvmretrofit.databinding.ActivityMainBinding;
 
+import java.util.List;
+
 import javax.inject.Inject;
+
+import io.reactivex.Observable;
 
 public class MainActivity extends BaseActivity<ActivityMainBinding,MainViewModel> implements MainView {
 
@@ -35,6 +40,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding,MainViewModel
         super.onCreate(savedInstanceState);
         mActivityLoginBinding = getViewDataBinding();
         viewModel.setNavigator(this);
+        viewModel.loadQuestionCards();
     }
 }
 
