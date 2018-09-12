@@ -1,5 +1,6 @@
 package com.livedatamvvmretrofit.base;
 
+
 import android.annotation.TargetApi;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -16,7 +17,7 @@ import android.view.inputmethod.InputMethodManager;
 
 import dagger.android.AndroidInjection;
 
-public abstract class BaseActivity<T extends ViewDataBinding, V extends BaseViewModel> extends AppCompatActivity {
+public abstract class BaseActivity<T extends ViewDataBinding, V extends BaseViewModel> extends AppCompatActivity{
 
     // TODO
     // this can probably depend on isLoading variable of BaseViewModel,
@@ -89,7 +90,6 @@ public abstract class BaseActivity<T extends ViewDataBinding, V extends BaseView
             requestPermissions(permissions, requestCode);
         }
     }
-
 
     private void performDataBinding() {
         mViewDataBinding = DataBindingUtil.setContentView(this, getLayoutId());

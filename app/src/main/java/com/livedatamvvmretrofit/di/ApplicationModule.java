@@ -32,4 +32,9 @@ public class ApplicationModule {
     SchedulerProvider provideSchedulerProvider() {
         return new AppSchedulerProvider();
     }
+
+    @Provides
+    AppDataManager provideAppDataManager() {
+        return new AppDataManager();
+    }
 }
