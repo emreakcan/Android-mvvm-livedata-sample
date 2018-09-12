@@ -1,8 +1,9 @@
 package com.livedatamvvmretrofit.data;
 
-import android.database.Observable;
 
 import java.util.List;
+
+import io.reactivex.Observable;
 
 public interface DataManager {
 
